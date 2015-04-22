@@ -1,0 +1,33 @@
+{
+  "name": "karma-coverage-test",
+  "version": "1.0.0",
+  "description": "Test Karma + Coffee + browserify for coverage",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run build-test && ./node_modules/karma/bin/karma start --single-run && cat coverage/result.txt",
+    "build": "./node_modules/.bin/browserify ./client/index.coffee -o build/b.js",
+    "build-test": "./node_modules/.bin/browserify ./test/index.coffee -o build-test/b_test.js && ./node_modules/.bin/browserify ./client/index.coffee -o build-test/b_instrumented_test.js",
+    "foo:": "open ./coverage/client/index.html"
+  },
+  "author": " <Calvin Wiebe>",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^9.0.8",
+    "browserify-istanbul": "^0.2.1",
+    "chai": "^2.2.0",
+    "coffee-script": "^1.9.2",
+    "coffeeify": "^1.0.0",
+    "karma": "^0.12.31",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^0.1.8",
+    "karma-coverage": "0.2.5",
+    "karma-mocha": "^0.1.10",
+    "mocha": "^2.2.4"
+  },
+  "browserify": {
+    "transform": [
+      "coffeeify",
+      "browserify-istanbul"
+    ]
+  }
+}

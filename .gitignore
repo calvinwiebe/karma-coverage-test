@@ -1,0 +1,15 @@
+# Package managers.
+/node_modules/
+/npm-debug.log
+/*.md5
+/vendor/
+
+# Build products.
+/build/
+/build-test/
+
+# Misc temporaries.
+*.swp
+*.swo
+*.orig
+.DS_Store
