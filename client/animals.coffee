@@ -10,3 +10,8 @@ exports.Dog = class Dog extends Animal
     talk: ->
         console.log 'Woof!'
 
+        if false
+            x = 2
+            y = 3
+            g = 'a'
+
