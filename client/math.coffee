@@ -7,16 +7,16 @@ exports.floor = (x) ->
 
 exports.crazy = ->
 
-exports.branch = (x, y) ->
+exports.branch = (x, y, bool) ->
 
     obj = {
         x: 1
         y: 2
     }
 
-    if obj?
+    if bool
         return obj.x
     else
         console.log 'This should not be executed'
-        return 1
+        return 2
 
